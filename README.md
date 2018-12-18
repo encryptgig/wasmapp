@@ -6,7 +6,7 @@ This is my experiment with wasm. This app is just a simple app which demostrate 
 
 `$ GOOS=js GOARCH=wasm go get -u github.com/rajnikant12345/wasmapp`
 
-#To Build this app just execute, on shell
+# To Build this app just execute:
 
 `$ make all`
 
