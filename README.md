@@ -10,9 +10,9 @@ This is my experiment with wasm. This app is just a simple app which demostrate 
 
 `$ make all`
 
-# and to serve it, just do:
+# To serve it, just do:
 
 `$ make run`
 
-* Please change the port form 8090 to something else, if needed. *
+* Please change the port form 8090 to something else, if needed. 
 
