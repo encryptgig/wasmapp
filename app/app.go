@@ -1,3 +1,4 @@
+// +build js,wasm
 package app
 
 import "github.com/rajnikant12345/wasmapp/engine"
