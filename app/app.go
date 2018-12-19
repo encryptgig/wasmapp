@@ -7,7 +7,7 @@ import "syscall/js"
 var AppObj js.Value
 
 func CreateApp() *engine.Element {
-	
+
 	e := engine.NewElement("div")
 	e.SetClass("tc")
 	heading := engine.NewElement("h1")
@@ -17,11 +17,20 @@ func CreateApp() *engine.Element {
 	e.AddChild(heading)
 	e.AddChild(s)
 
-	e.SetInnerHtml("<h1>Loading...</h1>")
+	loading := engine.NewElement("h1")
+	loading.SetInnerHtml("Loading...")
+	loading.SetClass("f1")
+
+	e.AddChild(s)
+
+	e.AddChild(loading)
+
+	//e.SetInnerHtml("<h1>Loading...</h1>")
 
 
 	go FetchRobots( func() {
-		e.SetInnerHtml("")
+		e.Node.Call("removeChild",loading.Node)
+		//e.SetInnerHtml("")
 		scrl := CreateScroll()
 		cl := CreateCardList()
 		scrl.AddChild(cl)

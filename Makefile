@@ -7,6 +7,7 @@ all: clean
 	cp *.js site/
 	cp *.wasm site/
 	cp *.html site/
+	cp *.woff site/
 
 clean:
 	rm -rf main.wasm
