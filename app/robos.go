@@ -15,7 +15,7 @@ type Robot struct {
 var RoboArray = []Robot{}
 
 
-func FetchRobots() {
+func FetchRobots(f func()) {
 	c := http.Client{}
 	res, err := c.Get("https://jsonplaceholder.typicode.com/users")
 	if err != nil {
@@ -24,8 +24,6 @@ func FetchRobots() {
 		decoder := json.NewDecoder(res.Body)
 		decoder.Decode(&RoboArray)
 		println(RoboArray)
+		f()
 	}
-
-
-
 }
