@@ -3,6 +3,9 @@ This is my experiment with wasm. This app is just a simple app which demostrate 
 
 ![Image of Yaktocat](https://github.com/rajnikant12345/wasmapp/blob/master/Screenshot%202018-12-18%20at%207.27.58%20PM.png)
 
+# Prerequisite 
+G0 1.11.3 installed
+
 
 # To get this app run:
 
