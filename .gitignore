@@ -1,6 +1,4 @@
 .idea
 goexec
-main.wasm
-wasm_exec.js
 wasmapp.iml
 state
