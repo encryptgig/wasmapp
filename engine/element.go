@@ -26,6 +26,12 @@ func (e *Element) AddChild(element *Element) {
 	//e.child = append(e.child , element)
 }
 
+func (e *Element) RemoveSingleChild(element *Element) {
+	//e.child = nil
+	e.Node.Call("removeChild",element.Node)
+
+}
+
 func (e *Element) RemoveChild() {
 	//e.child = nil
 	for {
