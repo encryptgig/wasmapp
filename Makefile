@@ -4,4 +4,7 @@ all: clean
 clean:
 	rm -rf main.wasm
 
+run:
+	go run server.go
+
 .PHONY: all
