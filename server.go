@@ -8,7 +8,7 @@ import (
 
 var (
 	listen = flag.String("listen", ":8090", "listen address")
-	dir    = flag.String("dir", ".", "directory to serve")
+	dir    = flag.String("dir", "./site", "directory to serve")
 )
 
 func main() {
