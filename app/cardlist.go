@@ -6,12 +6,21 @@ import "github.com/rajnikant12345/wasmapp/engine"
 
 var CardList *engine.Element
 
+var child map[string]*engine.Element
+
 func CreateCardList() *engine.Element {
 
 	e := engine.NewElement("div")
+	child = make(map[string]*engine.Element)
 
 	for _, j := range RoboArray {
-		e.AddChild(CreateCard("https://robohash.org/"+j.Name, j.Name, j.Email))
+
+		ch := CreateCard("https://robohash.org/"+j.Name, j.Name, j.Email)
+
+		child[j.Email] = ch
+
+		e.AddChild(ch)
+
 	}
 
 	CardList = e
@@ -21,6 +30,6 @@ func CreateCardList() *engine.Element {
 func UpdateCardList(tmp []Robot) {
 	CardList.RemoveChild()
 	for _, j := range tmp {
-		CardList.AddChild(CreateCard("https://robohash.org/"+j.Name,j.Name,j.Email))
+		CardList.AddChild(child[j.Email])
 	}
 }
