@@ -2,7 +2,7 @@
 
 package app
 
-import "github.com/rajnikant12345/wasmapp/engine"
+import "github.com/rajnikant12345/engine"
 
 var CardList *engine.Element
 

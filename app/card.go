@@ -3,7 +3,7 @@
 package app
 
 import (
-	"github.com/rajnikant12345/wasmapp/engine"
+	"github.com/rajnikant12345/engine"
 	"syscall/js"
 )
 

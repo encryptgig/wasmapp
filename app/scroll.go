@@ -2,7 +2,7 @@
 
 package app
 
-import "github.com/rajnikant12345/wasmapp/engine"
+import "github.com/rajnikant12345/engine"
 
 func CreateScroll( )  *engine.Element  {
 	e := engine.NewElement("div")
