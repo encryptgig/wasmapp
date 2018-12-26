@@ -11,8 +11,7 @@ import (
 
 func CreateSearchBox() *engine.Element {
 
-	e := engine.NewElement("div")
-	e.SetClass("pa2")
+	e := engine.NewElement("div").SetClass("pa2")
 	inp := engine.NewElement("input")
 
 	cb := js.NewCallback(func(args []js.Value) {
@@ -35,11 +34,7 @@ func CreateSearchBox() *engine.Element {
 		//this should update card list
 	})
 
-	inp.SetCallBack("keyup",cb)
-
-	inp.Set("type","search")
-	inp.Set( "placeholder","search robots")
-	inp.SetClass("pa3 ba b--green bg-lightest-blue")
+	inp.SetCallBack("keyup",cb).Set("type","search").Set( "placeholder","search robots").SetClass("pa3 ba b--green bg-lightest-blue")
 
 	e.AddChild(inp)
 
