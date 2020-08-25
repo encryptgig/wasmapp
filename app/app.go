@@ -1,8 +1,11 @@
 // +build js,wasm
 package app
 
-import "github.com/rajnikant12345/wasmapp/engine"
-import "syscall/js"
+import (
+	"syscall/js"
+
+	"github.com/encryptgig/wasmapp/engine"
+)
 
 var AppObj js.Value
 
@@ -16,17 +19,13 @@ func CreateApp() *engine.Element {
 	e.AddChild(s)
 	e.AddChild(loading)
 
-
-	go FetchRobots( func() {
-		e.Node.Call("removeChild",loading.Node)
+	go FetchRobots(func() {
+		e.Node.Call("removeChild", loading.Node)
 		//e.SetInnerHtml("")
 		scrl := CreateScroll()
 		cl := CreateCardList()
 		scrl.AddChild(cl)
 		e.AddChild(scrl)
-		})
+	})
 	return e
 }
-
-
-

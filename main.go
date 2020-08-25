@@ -3,8 +3,8 @@
 package main
 
 import (
-	"github.com/rajnikant12345/wasmapp/app"
-	"github.com/rajnikant12345/wasmapp/engine"
+	"github.com/encryptgig/wasmapp/app"
+	"github.com/encryptgig/wasmapp/engine"
 )
 
 func main() {
