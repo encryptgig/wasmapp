@@ -5,9 +5,10 @@ package engine
 import "syscall/js"
 
 type Element struct {
-	Node  js.Value
-	child []*Element
-	draw  func()
+	Parent *Element
+	Node   js.Value
+	child  []*Element
+	draw   func()
 }
 
 func NewElement(tag string) *Element {

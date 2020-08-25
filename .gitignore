@@ -2,3 +2,5 @@
 goexec
 wasmapp.iml
 state
+.vscode
+.vscode/*
