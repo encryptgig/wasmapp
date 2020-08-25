@@ -1,6 +1,5 @@
 all: clean
-	GOOS=js GOARCH=wasm go get -u github.com/rajnikant12345/engine
-	cp ${GOROOT}/misc/wasm/wasm_exec.js .
+	#cp ${GOROOT}/misc/wasm/wasm_exec.js .
 	GOOS=js GOARCH=wasm go build -o main.wasm main.go
 	rm -rf site
 	mkdir site

@@ -4,7 +4,7 @@ package main
 
 import (
 	"github.com/rajnikant12345/wasmapp/app"
-	"github.com/rajnikant12345/engine"
+	"github.com/rajnikant12345/wasmapp/engine"
 )
 
 func main() {

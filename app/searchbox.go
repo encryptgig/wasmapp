@@ -5,7 +5,7 @@ package app
 import (
 	"strings"
 	"syscall/js"
-	"github.com/rajnikant12345/engine"
+	"github.com/rajnikant12345/wasmapp/engine"
 )
 
 
@@ -14,7 +14,7 @@ func CreateSearchBox() *engine.Element {
 	e := engine.NewElement("div").SetClass("pa2")
 	inp := engine.NewElement("input")
 
-	cb := js.NewCallback(func(args []js.Value) {
+	cb := js.FuncOf(func(this js.Value, args []js.Value) interface{} {
 		e := args[0]
 		user := e.Get("target").Get("value").String()
 		println(user)
@@ -30,7 +30,7 @@ func CreateSearchBox() *engine.Element {
 		}else {
 			UpdateCardList(RoboArray)
 		}
-
+		return nil
 		//this should update card list
 	})
 
